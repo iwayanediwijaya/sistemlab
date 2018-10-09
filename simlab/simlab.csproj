@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CBF953E-EF73-4E41-8502-64CB7DFF53F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>simlab</RootNamespace>
+    <AssemblyName>simlab</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\f_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\f_login.Designer.cs">
+      <DependentUpon>f_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\f_permohonan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\f_permohonan.Designer.cs">
+      <DependentUpon>f_permohonan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Menu_Utama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Menu_Utama.Designer.cs">
+      <DependentUpon>Menu_Utama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_komoditi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_komoditi.Designer.cs">
+      <DependentUpon>view_komoditi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_negara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_negara.Designer.cs">
+      <DependentUpon>view_negara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_opt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_opt.Designer.cs">
+      <DependentUpon>view_opt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_pemilik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_pemilik.Designer.cs">
+      <DependentUpon>view_pemilik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_permohonan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_permohonan.Designer.cs">
+      <DependentUpon>view_permohonan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_provinsi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_provinsi.Designer.cs">
+      <DependentUpon>view_provinsi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kelas\koneksi.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\f_login.resx">
+      <DependentUpon>f_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\f_permohonan.resx">
+      <DependentUpon>f_permohonan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Menu_Utama.resx">
+      <DependentUpon>Menu_Utama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_komoditi.resx">
+      <DependentUpon>view_komoditi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_negara.resx">
+      <DependentUpon>view_negara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_opt.resx">
+      <DependentUpon>view_opt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_pemilik.resx">
+      <DependentUpon>view_pemilik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_permohonan.resx">
+      <DependentUpon>view_permohonan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_provinsi.resx">
+      <DependentUpon>view_provinsi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gambar\Utama.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
