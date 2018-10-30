@@ -22,25 +22,33 @@ D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_opt.r
 D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_komoditi.resources
 D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.btn_view_permohonan.resources
 D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_permohonan.resources
-D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_negara.resources
-D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_provinsi.resources
 D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_pemilik.resources
-D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_pelabuhan.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\bin\Debug\simlab.exe.config
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.exe
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.pdb
-D:\!ppl\projek\sistemlab\simlab\simlab\bin\Debug\simlab.exe
-D:\!ppl\projek\sistemlab\simlab\simlab\bin\Debug\simlab.pdb
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.csprojResolveAssemblyReference.cache
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.f_login.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.btn_view_permohonan.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.Menu_Utama.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.view_komoditi.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.view_negara.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.view_opt.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.view_pelabuhan.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.view_pemilik.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.view_permohonan.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.GUI.view_provinsi.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.Properties.Resources.resources
-D:\!ppl\projek\sistemlab\simlab\simlab\obj\Debug\simlab.csproj.GenerateResource.Cache
+D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_pelabuhan_asal.resources
+D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_pelabuhan_tujuan.resources
+D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_provinsi_asal.resources
+D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_provinsi_tujuan.resources
+D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_negara_asal.resources
+D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_negara_tujuan.resources
+D:\SISTEMLAB_Bissmillah\bissmillah\simlab\simlab\obj\Debug\simlab.GUI.view_target_pest.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\bin\Debug\simlab.exe.config
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.exe
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.pdb
+D:\!ppl\projek\simlab terbaru\simlab\simlab\bin\Debug\simlab.exe
+D:\!ppl\projek\simlab terbaru\simlab\simlab\bin\Debug\simlab.pdb
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.csprojResolveAssemblyReference.cache
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.f_login.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.btn_view_permohonan.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.Menu_Utama.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_komoditi.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_negara_asal.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_negara_tujuan.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_opt.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_pelabuhan_asal.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_pelabuhan_tujuan.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_pemilik.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_permohonan.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_provinsi_asal.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_provinsi_tujuan.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.GUI.view_target_pest.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.Properties.Resources.resources
+D:\!ppl\projek\simlab terbaru\simlab\simlab\obj\Debug\simlab.csproj.GenerateResource.Cache

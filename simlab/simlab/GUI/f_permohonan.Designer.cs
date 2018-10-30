@@ -77,7 +77,8 @@
             this.txt_nama_pemohon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupbox2 = new System.Windows.Forms.GroupBox();
-            this.txt_id_pemilik = new System.Windows.Forms.TextBox();
+            this.txt_kd_PP = new System.Windows.Forms.TextBox();
+            this.txt_kd_targetpest = new System.Windows.Forms.TextBox();
             this.btn_tmbhT_Pest = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -141,12 +142,14 @@
             this.label31 = new System.Windows.Forms.Label();
             this.txt_kode_pelabuhanA = new System.Windows.Forms.TextBox();
             this.txt_kdprov_tujuan = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupbox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -242,7 +245,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(22, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(639, 545);
+            this.groupBox1.Size = new System.Drawing.Size(639, 645);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -251,7 +254,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(484, 392);
+            this.label30.Location = new System.Drawing.Point(484, 472);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(60, 16);
             this.label30.TabIndex = 54;
@@ -261,7 +264,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(323, 393);
+            this.label27.Location = new System.Drawing.Point(323, 473);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(79, 16);
             this.label27.TabIndex = 53;
@@ -269,7 +272,7 @@
             // 
             // txt_perbks
             // 
-            this.txt_perbks.Location = new System.Drawing.Point(407, 390);
+            this.txt_perbks.Location = new System.Drawing.Point(407, 470);
             this.txt_perbks.Name = "txt_perbks";
             this.txt_perbks.Size = new System.Drawing.Size(71, 20);
             this.txt_perbks.TabIndex = 45;
@@ -284,7 +287,7 @@
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.txt_ilmiah_opt);
-            this.groupBox5.Location = new System.Drawing.Point(331, 105);
+            this.groupBox5.Location = new System.Drawing.Point(331, 168);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(300, 268);
             this.groupBox5.TabIndex = 44;
@@ -365,7 +368,7 @@
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.txt_nmKomoditi);
-            this.groupBox4.Location = new System.Drawing.Point(9, 105);
+            this.groupBox4.Location = new System.Drawing.Point(9, 168);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(311, 268);
             this.groupBox4.TabIndex = 43;
@@ -457,7 +460,7 @@
             "ONS",
             "SET",
             "TON"});
-            this.cmb_satuan.Location = new System.Drawing.Point(179, 389);
+            this.cmb_satuan.Location = new System.Drawing.Point(179, 469);
             this.cmb_satuan.Name = "cmb_satuan";
             this.cmb_satuan.Size = new System.Drawing.Size(126, 21);
             this.cmb_satuan.TabIndex = 40;
@@ -465,7 +468,7 @@
             // cb_js_umbi
             // 
             this.cb_js_umbi.AutoSize = true;
-            this.cb_js_umbi.Location = new System.Drawing.Point(451, 431);
+            this.cb_js_umbi.Location = new System.Drawing.Point(451, 518);
             this.cb_js_umbi.Name = "cb_js_umbi";
             this.cb_js_umbi.Size = new System.Drawing.Size(53, 17);
             this.cb_js_umbi.TabIndex = 38;
@@ -475,7 +478,7 @@
             // cb_js_all
             // 
             this.cb_js_all.AutoSize = true;
-            this.cb_js_all.Location = new System.Drawing.Point(112, 479);
+            this.cb_js_all.Location = new System.Drawing.Point(112, 566);
             this.cb_js_all.Name = "cb_js_all";
             this.cb_js_all.Size = new System.Drawing.Size(177, 17);
             this.cb_js_all.TabIndex = 35;
@@ -485,7 +488,7 @@
             // cb_js_lain
             // 
             this.cb_js_lain.AutoSize = true;
-            this.cb_js_lain.Location = new System.Drawing.Point(331, 456);
+            this.cb_js_lain.Location = new System.Drawing.Point(331, 543);
             this.cb_js_lain.Name = "cb_js_lain";
             this.cb_js_lain.Size = new System.Drawing.Size(93, 17);
             this.cb_js_lain.TabIndex = 32;
@@ -495,7 +498,7 @@
             // cb_js_daun
             // 
             this.cb_js_daun.AutoSize = true;
-            this.cb_js_daun.Location = new System.Drawing.Point(331, 433);
+            this.cb_js_daun.Location = new System.Drawing.Point(331, 520);
             this.cb_js_daun.Name = "cb_js_daun";
             this.cb_js_daun.Size = new System.Drawing.Size(57, 17);
             this.cb_js_daun.TabIndex = 31;
@@ -505,7 +508,7 @@
             // cb_js_buah
             // 
             this.cb_js_buah.AutoSize = true;
-            this.cb_js_buah.Location = new System.Drawing.Point(217, 456);
+            this.cb_js_buah.Location = new System.Drawing.Point(217, 543);
             this.cb_js_buah.Name = "cb_js_buah";
             this.cb_js_buah.Size = new System.Drawing.Size(56, 17);
             this.cb_js_buah.TabIndex = 30;
@@ -515,7 +518,7 @@
             // cb_js_batang
             // 
             this.cb_js_batang.AutoSize = true;
-            this.cb_js_batang.Location = new System.Drawing.Point(217, 433);
+            this.cb_js_batang.Location = new System.Drawing.Point(217, 520);
             this.cb_js_batang.Name = "cb_js_batang";
             this.cb_js_batang.Size = new System.Drawing.Size(70, 17);
             this.cb_js_batang.TabIndex = 29;
@@ -525,7 +528,7 @@
             // cb_js_biji
             // 
             this.cb_js_biji.AutoSize = true;
-            this.cb_js_biji.Location = new System.Drawing.Point(112, 456);
+            this.cb_js_biji.Location = new System.Drawing.Point(112, 543);
             this.cb_js_biji.Name = "cb_js_biji";
             this.cb_js_biji.Size = new System.Drawing.Size(44, 17);
             this.cb_js_biji.TabIndex = 28;
@@ -538,7 +541,7 @@
             this.cmb_jenisMedia.Items.AddRange(new object[] {
             "TANAH",
             "LAIN-LAINNYA"});
-            this.cmb_jenisMedia.Location = new System.Drawing.Point(149, 511);
+            this.cmb_jenisMedia.Location = new System.Drawing.Point(149, 602);
             this.cmb_jenisMedia.Name = "cmb_jenisMedia";
             this.cmb_jenisMedia.Size = new System.Drawing.Size(121, 21);
             this.cmb_jenisMedia.TabIndex = 72;
@@ -547,7 +550,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(5, 513);
+            this.label13.Location = new System.Drawing.Point(5, 604);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(131, 16);
             this.label13.TabIndex = 71;
@@ -556,7 +559,7 @@
             // cb_js_akar
             // 
             this.cb_js_akar.AutoSize = true;
-            this.cb_js_akar.Location = new System.Drawing.Point(112, 433);
+            this.cb_js_akar.Location = new System.Drawing.Point(112, 520);
             this.cb_js_akar.Name = "cb_js_akar";
             this.cb_js_akar.Size = new System.Drawing.Size(55, 17);
             this.cb_js_akar.TabIndex = 27;
@@ -567,7 +570,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 432);
+            this.label12.Location = new System.Drawing.Point(6, 519);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 16);
             this.label12.TabIndex = 26;
@@ -577,7 +580,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 390);
+            this.label11.Location = new System.Drawing.Point(6, 470);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 16);
             this.label11.TabIndex = 25;
@@ -585,7 +588,7 @@
             // 
             // txt_jml_sampel
             // 
-            this.txt_jml_sampel.Location = new System.Drawing.Point(112, 389);
+            this.txt_jml_sampel.Location = new System.Drawing.Point(112, 469);
             this.txt_jml_sampel.Name = "txt_jml_sampel";
             this.txt_jml_sampel.Size = new System.Drawing.Size(61, 20);
             this.txt_jml_sampel.TabIndex = 24;
@@ -593,7 +596,7 @@
             // cb_opt
             // 
             this.cb_opt.AutoSize = true;
-            this.cb_opt.Location = new System.Drawing.Point(525, 43);
+            this.cb_opt.Location = new System.Drawing.Point(222, 133);
             this.cb_opt.Name = "cb_opt";
             this.cb_opt.Size = new System.Drawing.Size(48, 17);
             this.cb_opt.TabIndex = 14;
@@ -603,7 +606,7 @@
             // cb_komoditi
             // 
             this.cb_komoditi.AutoSize = true;
-            this.cb_komoditi.Location = new System.Drawing.Point(525, 20);
+            this.cb_komoditi.Location = new System.Drawing.Point(125, 133);
             this.cb_komoditi.Name = "cb_komoditi";
             this.cb_komoditi.Size = new System.Drawing.Size(79, 17);
             this.cb_komoditi.TabIndex = 13;
@@ -614,7 +617,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(404, 19);
+            this.label6.Location = new System.Drawing.Point(13, 132);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 16);
             this.label6.TabIndex = 12;
@@ -622,17 +625,17 @@
             // 
             // txt_alamat_pemohon
             // 
-            this.txt_alamat_pemohon.Location = new System.Drawing.Point(125, 58);
+            this.txt_alamat_pemohon.Location = new System.Drawing.Point(125, 56);
             this.txt_alamat_pemohon.Multiline = true;
             this.txt_alamat_pemohon.Name = "txt_alamat_pemohon";
-            this.txt_alamat_pemohon.Size = new System.Drawing.Size(180, 41);
+            this.txt_alamat_pemohon.Size = new System.Drawing.Size(202, 46);
             this.txt_alamat_pemohon.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 62);
+            this.label5.Location = new System.Drawing.Point(12, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 16);
             this.label5.TabIndex = 10;
@@ -640,16 +643,16 @@
             // 
             // txt_nama_pemohon
             // 
-            this.txt_nama_pemohon.Location = new System.Drawing.Point(125, 19);
+            this.txt_nama_pemohon.Location = new System.Drawing.Point(125, 23);
             this.txt_nama_pemohon.Name = "txt_nama_pemohon";
-            this.txt_nama_pemohon.Size = new System.Drawing.Size(180, 20);
+            this.txt_nama_pemohon.Size = new System.Drawing.Size(202, 20);
             this.txt_nama_pemohon.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 20);
+            this.label4.Location = new System.Drawing.Point(13, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 8;
@@ -658,7 +661,8 @@
             // groupbox2
             // 
             this.groupbox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupbox2.Controls.Add(this.txt_id_pemilik);
+            this.groupbox2.Controls.Add(this.txt_kd_PP);
+            this.groupbox2.Controls.Add(this.txt_kd_targetpest);
             this.groupbox2.Controls.Add(this.btn_tmbhT_Pest);
             this.groupbox2.Controls.Add(this.label26);
             this.groupbox2.Controls.Add(this.label25);
@@ -691,22 +695,31 @@
             this.groupbox2.Controls.Add(this.txt_target_pest);
             this.groupbox2.Controls.Add(this.label20);
             this.groupbox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupbox2.Location = new System.Drawing.Point(667, 297);
+            this.groupbox2.Location = new System.Drawing.Point(667, 274);
             this.groupbox2.Name = "groupbox2";
-            this.groupbox2.Size = new System.Drawing.Size(687, 413);
+            this.groupbox2.Size = new System.Drawing.Size(513, 413);
             this.groupbox2.TabIndex = 38;
             this.groupbox2.TabStop = false;
             // 
-            // txt_id_pemilik
+            // txt_kd_PP
             // 
-            this.txt_id_pemilik.Location = new System.Drawing.Point(121, 211);
-            this.txt_id_pemilik.Name = "txt_id_pemilik";
-            this.txt_id_pemilik.Size = new System.Drawing.Size(58, 20);
-            this.txt_id_pemilik.TabIndex = 75;
+            this.txt_kd_PP.Location = new System.Drawing.Point(121, 211);
+            this.txt_kd_PP.Name = "txt_kd_PP";
+            this.txt_kd_PP.Size = new System.Drawing.Size(61, 20);
+            this.txt_kd_PP.TabIndex = 73;
+            this.txt_kd_PP.Text = " ";
+            // 
+            // txt_kd_targetpest
+            // 
+            this.txt_kd_targetpest.Location = new System.Drawing.Point(126, 73);
+            this.txt_kd_targetpest.Multiline = true;
+            this.txt_kd_targetpest.Name = "txt_kd_targetpest";
+            this.txt_kd_targetpest.Size = new System.Drawing.Size(81, 51);
+            this.txt_kd_targetpest.TabIndex = 75;
             // 
             // btn_tmbhT_Pest
             // 
-            this.btn_tmbhT_Pest.Location = new System.Drawing.Point(329, 101);
+            this.btn_tmbhT_Pest.Location = new System.Drawing.Point(413, 101);
             this.btn_tmbhT_Pest.Name = "btn_tmbhT_Pest";
             this.btn_tmbhT_Pest.Size = new System.Drawing.Size(60, 23);
             this.btn_tmbhT_Pest.TabIndex = 41;
@@ -847,17 +860,17 @@
             // cb_mp_elisa
             // 
             this.cb_mp_elisa.AutoSize = true;
-            this.cb_mp_elisa.Location = new System.Drawing.Point(282, 162);
+            this.cb_mp_elisa.Location = new System.Drawing.Point(318, 161);
             this.cb_mp_elisa.Name = "cb_mp_elisa";
-            this.cb_mp_elisa.Size = new System.Drawing.Size(72, 17);
+            this.cb_mp_elisa.Size = new System.Drawing.Size(87, 17);
             this.cb_mp_elisa.TabIndex = 46;
-            this.cb_mp_elisa.Text = "Elisa Test";
+            this.cb_mp_elisa.Text = "ELISA TEST";
             this.cb_mp_elisa.UseVisualStyleBackColor = true;
             // 
             // cb_mp_pcr
             // 
             this.cb_mp_pcr.AutoSize = true;
-            this.cb_mp_pcr.Location = new System.Drawing.Point(360, 139);
+            this.cb_mp_pcr.Location = new System.Drawing.Point(425, 139);
             this.cb_mp_pcr.Name = "cb_mp_pcr";
             this.cb_mp_pcr.Size = new System.Drawing.Size(48, 17);
             this.cb_mp_pcr.TabIndex = 45;
@@ -867,11 +880,11 @@
             // cb_mp_agar
             // 
             this.cb_mp_agar.AutoSize = true;
-            this.cb_mp_agar.Location = new System.Drawing.Point(282, 139);
+            this.cb_mp_agar.Location = new System.Drawing.Point(318, 138);
             this.cb_mp_agar.Name = "cb_mp_agar";
-            this.cb_mp_agar.Size = new System.Drawing.Size(72, 17);
+            this.cb_mp_agar.Size = new System.Drawing.Size(87, 17);
             this.cb_mp_agar.TabIndex = 44;
-            this.cb_mp_agar.Text = "Agar Test";
+            this.cb_mp_agar.Text = "AGAR TEST";
             this.cb_mp_agar.UseVisualStyleBackColor = true;
             // 
             // cb_mp_blotter
@@ -879,9 +892,9 @@
             this.cb_mp_blotter.AutoSize = true;
             this.cb_mp_blotter.Location = new System.Drawing.Point(139, 161);
             this.cb_mp_blotter.Name = "cb_mp_blotter";
-            this.cb_mp_blotter.Size = new System.Drawing.Size(80, 17);
+            this.cb_mp_blotter.Size = new System.Drawing.Size(107, 17);
             this.cb_mp_blotter.TabIndex = 43;
-            this.cb_mp_blotter.Text = "Blotter Test";
+            this.cb_mp_blotter.Text = "BLOTTER TEST";
             this.cb_mp_blotter.UseVisualStyleBackColor = true;
             // 
             // cb_mp_pLangsung
@@ -889,9 +902,9 @@
             this.cb_mp_pLangsung.AutoSize = true;
             this.cb_mp_pLangsung.Location = new System.Drawing.Point(139, 138);
             this.cb_mp_pLangsung.Name = "cb_mp_pLangsung";
-            this.cb_mp_pLangsung.Size = new System.Drawing.Size(137, 17);
+            this.cb_mp_pLangsung.Size = new System.Drawing.Size(166, 17);
             this.cb_mp_pLangsung.TabIndex = 42;
-            this.cb_mp_pLangsung.Text = "Pemeriksaan Langsung";
+            this.cb_mp_pLangsung.Text = "PEMERIKSAAN LANGSUNG";
             this.cb_mp_pLangsung.UseVisualStyleBackColor = true;
             // 
             // cb_tp_biotek
@@ -986,7 +999,7 @@
             // 
             // txt_target_pest
             // 
-            this.txt_target_pest.Location = new System.Drawing.Point(129, 72);
+            this.txt_target_pest.Location = new System.Drawing.Point(213, 72);
             this.txt_target_pest.Multiline = true;
             this.txt_target_pest.Name = "txt_target_pest";
             this.txt_target_pest.Size = new System.Drawing.Size(194, 52);
@@ -1086,7 +1099,7 @@
             // 
             // btn_simpan
             // 
-            this.btn_simpan.Location = new System.Drawing.Point(6, 11);
+            this.btn_simpan.Location = new System.Drawing.Point(6, 19);
             this.btn_simpan.Name = "btn_simpan";
             this.btn_simpan.Size = new System.Drawing.Size(60, 23);
             this.btn_simpan.TabIndex = 78;
@@ -1096,51 +1109,52 @@
             // 
             // btn_batal
             // 
-            this.btn_batal.Location = new System.Drawing.Point(104, 40);
+            this.btn_batal.Location = new System.Drawing.Point(102, 19);
             this.btn_batal.Name = "btn_batal";
             this.btn_batal.Size = new System.Drawing.Size(60, 23);
             this.btn_batal.TabIndex = 79;
             this.btn_batal.Text = "BATAL";
             this.btn_batal.UseVisualStyleBackColor = true;
+            this.btn_batal.Click += new System.EventHandler(this.btn_batal_Click);
             // 
             // btn_hapus
             // 
-            this.btn_hapus.Location = new System.Drawing.Point(175, 40);
+            this.btn_hapus.Location = new System.Drawing.Point(57, 60);
             this.btn_hapus.Name = "btn_hapus";
             this.btn_hapus.Size = new System.Drawing.Size(60, 23);
             this.btn_hapus.TabIndex = 80;
             this.btn_hapus.Text = "HAPUS";
             this.btn_hapus.UseVisualStyleBackColor = true;
+            this.btn_hapus.Click += new System.EventHandler(this.btn_hapus_Click);
             // 
             // btn_cetak
             // 
-            this.btn_cetak.Location = new System.Drawing.Point(204, 11);
+            this.btn_cetak.Location = new System.Drawing.Point(9, 58);
             this.btn_cetak.Name = "btn_cetak";
             this.btn_cetak.Size = new System.Drawing.Size(150, 23);
             this.btn_cetak.TabIndex = 81;
             this.btn_cetak.Text = "CETAK PERMOHONAN";
             this.btn_cetak.UseVisualStyleBackColor = true;
+            this.btn_cetak.Click += new System.EventHandler(this.btn_cetak_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(72, 11);
+            this.button1.Location = new System.Drawing.Point(20, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 23);
             this.button1.TabIndex = 82;
-            this.button1.Text = "DATA PERMOHONAN";
+            this.button1.Text = "LIHAT DATA";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btn_simpan);
-            this.groupBox3.Controls.Add(this.btn_hapus);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.btn_cetak);
             this.groupBox3.Controls.Add(this.btn_batal);
-            this.groupBox3.Location = new System.Drawing.Point(294, 596);
+            this.groupBox3.Controls.Add(this.btn_hapus);
+            this.groupBox3.Location = new System.Drawing.Point(1186, 451);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(367, 74);
+            this.groupBox3.Size = new System.Drawing.Size(168, 89);
             this.groupBox3.TabIndex = 83;
             this.groupBox3.TabStop = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
@@ -1173,7 +1187,7 @@
             this.groupBox6.Controls.Add(this.txt_idnegara_asal);
             this.groupBox6.Location = new System.Drawing.Point(667, 42);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(693, 226);
+            this.groupBox6.Size = new System.Drawing.Size(687, 226);
             this.groupBox6.TabIndex = 86;
             this.groupBox6.TabStop = false;
             // 
@@ -1240,7 +1254,7 @@
             // 
             // txt_prov_tujuan
             // 
-            this.txt_prov_tujuan.Location = new System.Drawing.Point(220, 123);
+            this.txt_prov_tujuan.Location = new System.Drawing.Point(220, 128);
             this.txt_prov_tujuan.Name = "txt_prov_tujuan";
             this.txt_prov_tujuan.Size = new System.Drawing.Size(146, 20);
             this.txt_prov_tujuan.TabIndex = 76;
@@ -1257,7 +1271,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(8, 127);
+            this.label33.Location = new System.Drawing.Point(8, 132);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(83, 16);
             this.label33.TabIndex = 75;
@@ -1315,11 +1329,21 @@
             // 
             // txt_kdprov_tujuan
             // 
-            this.txt_kdprov_tujuan.Location = new System.Drawing.Point(156, 123);
+            this.txt_kdprov_tujuan.Location = new System.Drawing.Point(156, 128);
             this.txt_kdprov_tujuan.Name = "txt_kdprov_tujuan";
             this.txt_kdprov_tujuan.Size = new System.Drawing.Size(58, 20);
             this.txt_kdprov_tujuan.TabIndex = 78;
             this.txt_kdprov_tujuan.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btn_cetak);
+            this.groupBox7.Controls.Add(this.button1);
+            this.groupBox7.Location = new System.Drawing.Point(1186, 557);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(168, 89);
+            this.groupBox7.TabIndex = 87;
+            this.groupBox7.TabStop = false;
             // 
             // btn_view_permohonan
             // 
@@ -1327,7 +1351,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1366, 788);
+            this.ClientSize = new System.Drawing.Size(1366, 710);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_new);
@@ -1355,6 +1380,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1443,7 +1469,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_kode_opt;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txt_id_pemilik;
+        private System.Windows.Forms.TextBox txt_kd_targetpest;
         private System.Windows.Forms.TextBox txt_idnegara_tujuan;
         private System.Windows.Forms.TextBox txt_idnegara_asal;
         private System.Windows.Forms.ComboBox cmb_jenisMedia;
@@ -1474,5 +1500,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button btn_cari_Pasal;
         private System.Windows.Forms.TextBox txt_kdprov_asal;
+        private System.Windows.Forms.TextBox txt_kd_PP;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }

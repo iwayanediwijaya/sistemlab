@@ -70,11 +70,17 @@
     <Compile Include="GUI\view_komoditi.Designer.cs">
       <DependentUpon>view_komoditi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\view_negara.cs">
+    <Compile Include="GUI\view_negara_asal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\view_negara.Designer.cs">
-      <DependentUpon>view_negara.cs</DependentUpon>
+    <Compile Include="GUI\view_negara_asal.Designer.cs">
+      <DependentUpon>view_negara_asal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_negara_tujuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_negara_tujuan.Designer.cs">
+      <DependentUpon>view_negara_tujuan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\view_opt.cs">
       <SubType>Form</SubType>
@@ -82,11 +88,17 @@
     <Compile Include="GUI\view_opt.Designer.cs">
       <DependentUpon>view_opt.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\view_pelabuhan.cs">
+    <Compile Include="GUI\view_pelabuhan_asal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\view_pelabuhan.Designer.cs">
-      <DependentUpon>view_pelabuhan.cs</DependentUpon>
+    <Compile Include="GUI\view_pelabuhan_asal.Designer.cs">
+      <DependentUpon>view_pelabuhan_asal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_pelabuhan_tujuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_pelabuhan_tujuan.Designer.cs">
+      <DependentUpon>view_pelabuhan_tujuan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\view_pemilik.cs">
       <SubType>Form</SubType>
@@ -100,11 +112,23 @@
     <Compile Include="GUI\view_permohonan.Designer.cs">
       <DependentUpon>view_permohonan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\view_provinsi.cs">
+    <Compile Include="GUI\view_provinsi_asal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\view_provinsi.Designer.cs">
-      <DependentUpon>view_provinsi.cs</DependentUpon>
+    <Compile Include="GUI\view_provinsi_asal.Designer.cs">
+      <DependentUpon>view_provinsi_asal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_provinsi_tujuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_provinsi_tujuan.Designer.cs">
+      <DependentUpon>view_provinsi_tujuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\view_target_pest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\view_target_pest.Designer.cs">
+      <DependentUpon>view_target_pest.cs</DependentUpon>
     </Compile>
     <Compile Include="kelas\koneksi.cs" />
     <Compile Include="Program.cs" />
@@ -121,14 +145,20 @@
     <EmbeddedResource Include="GUI\view_komoditi.resx">
       <DependentUpon>view_komoditi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\view_negara.resx">
-      <DependentUpon>view_negara.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\view_negara_asal.resx">
+      <DependentUpon>view_negara_asal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_negara_tujuan.resx">
+      <DependentUpon>view_negara_tujuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\view_opt.resx">
       <DependentUpon>view_opt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\view_pelabuhan.resx">
-      <DependentUpon>view_pelabuhan.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\view_pelabuhan_asal.resx">
+      <DependentUpon>view_pelabuhan_asal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_pelabuhan_tujuan.resx">
+      <DependentUpon>view_pelabuhan_tujuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\view_pemilik.resx">
       <DependentUpon>view_pemilik.cs</DependentUpon>
@@ -136,8 +166,14 @@
     <EmbeddedResource Include="GUI\view_permohonan.resx">
       <DependentUpon>view_permohonan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\view_provinsi.resx">
-      <DependentUpon>view_provinsi.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\view_provinsi_asal.resx">
+      <DependentUpon>view_provinsi_asal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_provinsi_tujuan.resx">
+      <DependentUpon>view_provinsi_tujuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\view_target_pest.resx">
+      <DependentUpon>view_target_pest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
