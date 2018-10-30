@@ -72,15 +72,19 @@ namespace simlab.GUI
             menu_laporan.Enabled = false;
             mdiobj = this;
 
-            GUI.f_login login = new GUI.f_login();
-            login.ShowDialog();
+            //GUI.f_login login = new GUI.f_login();
+            //login.ShowDialog();
         }
 
         private void Submenu_permohonan_Click(object sender, EventArgs e)
         {
             GUI.btn_view_permohonan permohonan = new GUI.btn_view_permohonan();
-            permohonan.MdiParent = this;
             permohonan.Show();
+        }
+
+        private void Submenu_TterimaSampel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txt_cari_permohonan = new System.Windows.Forms.TextBox();
             this.dtg_view_permohonan = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_view_permohonan)).BeginInit();
             this.SuspendLayout();
@@ -48,22 +48,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Data Permohonan";
             // 
-            // txt_cari_permohonan
-            // 
-            this.txt_cari_permohonan.Location = new System.Drawing.Point(815, 21);
-            this.txt_cari_permohonan.Name = "txt_cari_permohonan";
-            this.txt_cari_permohonan.Size = new System.Drawing.Size(193, 20);
-            this.txt_cari_permohonan.TabIndex = 78;
-            this.txt_cari_permohonan.Text = " ";
-            // 
-            // dtg_view_permohonan
-            // 
-            this.dtg_view_permohonan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_view_permohonan.Location = new System.Drawing.Point(6, 47);
-            this.dtg_view_permohonan.Name = "dtg_view_permohonan";
-            this.dtg_view_permohonan.Size = new System.Drawing.Size(1003, 452);
-            this.dtg_view_permohonan.TabIndex = 46;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -72,6 +56,24 @@
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 79;
             this.label1.Text = "Cari Data";
+            // 
+            // txt_cari_permohonan
+            // 
+            this.txt_cari_permohonan.Location = new System.Drawing.Point(815, 21);
+            this.txt_cari_permohonan.Name = "txt_cari_permohonan";
+            this.txt_cari_permohonan.Size = new System.Drawing.Size(193, 20);
+            this.txt_cari_permohonan.TabIndex = 78;
+            this.txt_cari_permohonan.Text = " ";
+            this.txt_cari_permohonan.TextChanged += new System.EventHandler(this.txt_cari_permohonan_TextChanged);
+            // 
+            // dtg_view_permohonan
+            // 
+            this.dtg_view_permohonan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_view_permohonan.Location = new System.Drawing.Point(6, 47);
+            this.dtg_view_permohonan.Name = "dtg_view_permohonan";
+            this.dtg_view_permohonan.Size = new System.Drawing.Size(1003, 452);
+            this.dtg_view_permohonan.TabIndex = 46;
+            this.dtg_view_permohonan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_view_permohonan_CellContentClick);
             // 
             // view_permohonan
             // 

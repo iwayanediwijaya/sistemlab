@@ -326,6 +326,41 @@ namespace simlab.GUI
             GUI.view_permohonan v_permohonan = new GUI.view_permohonan();
             v_permohonan.ShowDialog();
 
+
+            txt_noPermohonan.Text = v_permohonan.ambil_no_permohonan;
+            dtp_tanggal.Text = v_permohonan.ambil_tgl_permohonan;
+            cmb_Jkegiatan.Text = v_permohonan.ambil_jenis_kegiatan;
+            txt_nama_pemohon.Text = v_permohonan.ambil_nama_pemohon;
+            txt_alamat_pemohon.Text = v_permohonan.ambil_alamat_pemohon;
+            cb_komoditi.Text = v_permohonan.ambil_jenis_media1;
+            cb_opt.Text = v_permohonan.ambil_jenis_media2;
+            txt_kode_komoditi.Text = v_permohonan.ambil_kode_komoditi;
+            txt_kode_opt.Text = v_permohonan.ambil_kode_opt;
+            txt_jml_sampel.Text = v_permohonan.ambil_jumlah_sampel;
+            cmb_satuan.Text = v_permohonan.ambil_satuan;
+            txt_perbks.Text = v_permohonan.ambil_per_bungkus;
+            cmb_jenisMedia.Text = v_permohonan.ambil_media_pembawa;
+            txt_idnegara_asal.Text = v_permohonan.ambil_id_negara_asal;
+            txt_idnegara_tujuan.Text = v_permohonan.ambil_id_negara_tujuan;
+            txt_kdprov_asal.Text = v_permohonan.ambil_kode_provinsi_asal;
+            txt_kdprov_tujuan.Text = v_permohonan.ambil_kode_provinsi_tujuan;
+            txt_kode_pelabuhanA.Text = v_permohonan.ambil_id_pelabuhan_asal;
+            txt_kode_pelabuhanT.Text = v_permohonan.ambil_id_pelabuhan_tujuan;
+            cb_tp_virus.Text = v_permohonan.ambil_target_uji1;
+            cb_tp_cendawan.Text = v_permohonan.ambil_target_uji2;
+            cb_tp_bakteri.Text = v_permohonan.ambil_target_uji3;
+            cb_tp_biotek.Text = v_permohonan.ambil_target_uji4;
+            cb_tp_serangga.Text = v_permohonan.ambil_target_uji5;
+            cb_tp_nematoda.Text = v_permohonan.ambil_target_uji6;
+            cb_tp_gulma.Text = v_permohonan.ambil_target_uji7;
+            cb_mp_pLangsung.Text = v_permohonan.ambil_metode_periksa1;
+            cb_mp_agar.Text = v_permohonan.ambil_metode_periksa2;
+            cb_mp_pcr.Text = v_permohonan.ambil_metode_periksa3;
+            cb_mp_blotter.Text = v_permohonan.ambil_metode_periksa4;
+            cb_mp_elisa.Text = v_permohonan.ambil_metode_periksa5;
+            txt_id_pemilik.Text = v_permohonan.ambil_id_pp;
+            txt_noPermohonan.Focus();
+
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -477,6 +512,12 @@ namespace simlab.GUI
         private void btn_pelabuhanT_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_batal_Click(object sender, EventArgs e)
+        {
+            Bersih();
+            this.Close();
         }
 
     }

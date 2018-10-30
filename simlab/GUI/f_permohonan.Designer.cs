@@ -1100,6 +1100,7 @@
             this.btn_batal.TabIndex = 79;
             this.btn_batal.Text = "BATAL";
             this.btn_batal.UseVisualStyleBackColor = true;
+            this.btn_batal.Click += new System.EventHandler(this.btn_batal_Click);
             // 
             // btn_hapus
             // 
