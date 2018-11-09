@@ -73,7 +73,7 @@
             this.dtg_view_permohonan.Name = "dtg_view_permohonan";
             this.dtg_view_permohonan.Size = new System.Drawing.Size(1003, 452);
             this.dtg_view_permohonan.TabIndex = 46;
-            this.dtg_view_permohonan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_view_permohonan_CellContentClick);
+            this.dtg_view_permohonan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_view_permohonan_CellClick);
             // 
             // view_permohonan
             // 

@@ -79,21 +79,21 @@
             // 
             this.Submenu_login.Image = ((System.Drawing.Image)(resources.GetObject("Submenu_login.Image")));
             this.Submenu_login.Name = "Submenu_login";
-            this.Submenu_login.Size = new System.Drawing.Size(152, 22);
+            this.Submenu_login.Size = new System.Drawing.Size(121, 22);
             this.Submenu_login.Text = "&LOGIN";
             this.Submenu_login.Click += new System.EventHandler(this.Submenu_login_Click);
             // 
             // Submenu_logout
             // 
             this.Submenu_logout.Name = "Submenu_logout";
-            this.Submenu_logout.Size = new System.Drawing.Size(152, 22);
+            this.Submenu_logout.Size = new System.Drawing.Size(121, 22);
             this.Submenu_logout.Text = "&LOGOUT";
             this.Submenu_logout.Click += new System.EventHandler(this.Submenu_logout_Click);
             // 
             // exit
             // 
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(152, 22);
+            this.exit.Size = new System.Drawing.Size(121, 22);
             this.exit.Text = "&EXIT";
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
@@ -134,12 +134,14 @@
             this.Submenu_TterimaSampel.Name = "Submenu_TterimaSampel";
             this.Submenu_TterimaSampel.Size = new System.Drawing.Size(205, 22);
             this.Submenu_TterimaSampel.Text = "Tanda Terima Sampel";
+            this.Submenu_TterimaSampel.Click += new System.EventHandler(this.Submenu_TterimaSampel_Click);
             // 
             // Submenu_KajiUlang
             // 
             this.Submenu_KajiUlang.Name = "Submenu_KajiUlang";
             this.Submenu_KajiUlang.Size = new System.Drawing.Size(205, 22);
             this.Submenu_KajiUlang.Text = "Kaji Ulang";
+            this.Submenu_KajiUlang.Click += new System.EventHandler(this.Submenu_KajiUlang_Click);
             // 
             // Submenu_resPermohonan
             // 

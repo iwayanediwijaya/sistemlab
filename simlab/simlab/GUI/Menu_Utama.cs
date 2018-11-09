@@ -82,5 +82,19 @@ namespace simlab.GUI
             permohonan.MdiParent = this;
             permohonan.Show();
         }
+
+        private void Submenu_TterimaSampel_Click(object sender, EventArgs e)
+        {
+            GUI.f_tandaterima_sampel tts = new GUI.f_tandaterima_sampel();
+            tts.MdiParent = this;
+            tts.Show();
+        }
+
+        private void Submenu_KajiUlang_Click(object sender, EventArgs e)
+        {
+            GUI.f_kaji_ulang_permohonan KUP = new GUI.f_kaji_ulang_permohonan();
+            KUP.MdiParent = this;
+            KUP.Show();
+        }
     }
 }

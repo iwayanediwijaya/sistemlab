@@ -16,6 +16,9 @@ namespace simlab.GUI
         private SqlCommand cmd;
         private DataSet ds;
         private SqlDataAdapter sda;
+
+        string no_permohonan;
+
 //      public string 
      // private SqlDataReader dr;
 
@@ -27,15 +30,6 @@ namespace simlab.GUI
             InitializeComponent();
         }
 
-       
-        
-
-        private void auto_number()
-        {
-          //  long hitung;
-          //  string urut;
-          //  SqlConnection conn; 
-        }
         private void Bersih()
         {
             txt_noPermohonan.Text = "";
@@ -266,25 +260,43 @@ namespace simlab.GUI
                 }
                 else
                 {
-               //Simpan data ke database
-                    //view_permohonan.Enabled = true; 
                     SqlConnection conn = konn.GetConn();
                     try
                     {
+
                         cmd = new SqlCommand("INSERT INTO tblF_permohonan (no_permohonan, tgl_permohonan, jenis_kegiatan, nama_pemohon, alamat_pemohon, jenis_media1, jenis_media2, kode_komoditi, nama_umum_komoditi, nama_latin_komoditi, kode_opt, nama_umum_opt, nama_latin_opt, jumlah_sampel ,satuan, jenis_sampel_1, jenis_sampel_2, jenis_sampel_3, jenis_sampel_4, jenis_sampel_5, jenis_sampel_6, jenis_sampel_7, jenis_sampel_All, media_pembawa, id_negara_asal, nama_en_negara_asal, id_negara_tujuan, nama_en_negara_tujuan, kode_provinsi_asal, nama_provinsi_asal, kode_provinsi_tujuan, nama_provinsi_tujuan, id_pelabuhan_asal, nama_pelabuhan_asal, id_pelabuhan_tujuan, nama_pelabuhan_tujuan, target_uji1, target_uji2, target_uji3, target_uji4, target_uji5, target_uji6, target_uji7, kode_targetpest, metode_periksa1, metode_periksa2, metode_periksa3, metode_periksa4, metode_periksa5, id_PP) VALUES  (@no_permohonan, @tgl_permohonan, @jenis_kegiatan, @nama_pemohon, @alamat_pemohon, @jenis_media1, @jenis_media2, @kode_komoditi, @nama_umum_komoditi, @nama_latin_komoditi, @kode_opt, @nama_umum_opt, @nama_latin_opt, @jumlah_sampel, @satuan, @jenis_sampel_1, @jenis_sampel_2, @jenis_sampel_3, @jenis_sampel_4, @jenis_sampel_5, @jenis_sampel_6, @jenis_sampel_7, @jenis_sampel_All, @media_pembawa, @id_negara_asal, @nama_en_negara_asal , @id_negara_tujuan, @nama_en_negara_tujuan , @kode_provinsi_asal, @nama_provinsi_asal, @kode_provinsi_tujuan, @nama_provinsi_tujuan, @id_pelabuhan_asal, @nama_pelabuhan_asal, @id_pelabuhan_tujuan, @nama_pelabuhan_tujuan, @target_uji1, @target_uji2, @target_uji3, @target_uji4, @target_uji5, @target_uji6, @target_uji7, @kode_targetpest, @metode_periksa1, @metode_periksa2, @metode_periksa3, @metode_periksa4, @metode_periksa5, @id_PP)", conn); 
                         conn.Open();
 
+                        no_permohonan = txt_noPermohonan.Text + "/" + "KT" + "/" + dtp_tanggal.Value.ToString("MMyyyy");
+
                         //urut = DateTime.Now.ToString("yyyyMMdd");
                        // hitung = Convert.ToInt64(["no_permohonan"].ToString());
-                        cmd.Parameters.AddWithValue("@no_permohonan", txt_noPermohonan.Text);
+                        cmd.Parameters.AddWithValue("@no_permohonan", no_permohonan);
                         cmd.Parameters.AddWithValue("@tgl_permohonan", dtp_tanggal.Value.Date);
                         cmd.Parameters.AddWithValue("@jenis_kegiatan", cmb_Jkegiatan.Text );
                         cmd.Parameters.AddWithValue("@nama_pemohon", txt_nama_pemohon.Text);
                         cmd.Parameters.AddWithValue("@alamat_pemohon", txt_alamat_pemohon.Text);
-                        
-                        cmd.Parameters.AddWithValue("@jenis_media1", cb_komoditi.Text);
-                        cmd.Parameters.AddWithValue("@jenis_media2", cb_opt.Text);
-                        
+
+
+                        if (cb_komoditi.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_media1", cb_komoditi.Text);
+                        }
+                        if (cb_komoditi.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_media1", cb_komoditi.Checked);
+                        }
+
+                        if (cb_opt.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_media2", cb_opt.Text);
+                        }
+
+                        if (cb_opt.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_media2", cb_opt.Checked);
+                        }
+
                         cmd.Parameters.AddWithValue("@kode_komoditi", txt_kode_komoditi.Text);
                         cmd.Parameters.AddWithValue("@nama_umum_komoditi", txt_nmKomoditi.Text);
                         cmd.Parameters.AddWithValue("@nama_latin_komoditi", txt_ilmiah_komod.Text);
@@ -295,16 +307,90 @@ namespace simlab.GUI
                         
                         cmd.Parameters.AddWithValue("@jumlah_sampel", txt_jml_sampel.Text);
                         cmd.Parameters.AddWithValue("@satuan", cmb_satuan.Text);
-                        cmd.Parameters.AddWithValue("@per_bungkus", txt_perbks.Text);
 
-                        cmd.Parameters.AddWithValue("@jenis_sampel_1", cb_js_akar.Text);
-                        cmd.Parameters.AddWithValue("@jenis_sampel_2", cb_js_batang.Text);
-                        cmd.Parameters.AddWithValue("@jenis_sampel_3", cb_js_daun.Text);
-                        cmd.Parameters.AddWithValue("@jenis_sampel_4", cb_js_umbi.Text);
-                        cmd.Parameters.AddWithValue("@jenis_sampel_5", cb_js_biji.Text);
-                        cmd.Parameters.AddWithValue("@jenis_sampel_6", cb_js_buah.Text);
-                        cmd.Parameters.AddWithValue("@jenis_sampel_7", cb_js_lain.Text);
-                        cmd.Parameters.AddWithValue("@jenis_sampel_All", cb_js_all.Text);
+                        if (cb_js_akar.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_1", cb_js_akar.Text);
+                        }
+                        if (cb_js_akar.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_1", cb_js_akar.Checked);
+                        }
+
+
+                        if (cb_js_batang.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_2", cb_js_batang.Text);
+                        }
+                        if (cb_js_batang.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_2", cb_js_batang.Checked);
+                        }
+
+
+                        if (cb_js_daun.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_3", cb_js_daun.Text);
+                        }
+                        if (cb_js_daun.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_3", cb_js_daun.Checked);
+                        }
+
+
+                        if (cb_js_umbi.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_4", cb_js_umbi.Text);
+                        }
+                        if (cb_js_umbi.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_4", cb_js_umbi.Checked);
+                        }
+
+
+                        if (cb_js_biji.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_5", cb_js_biji.Text);
+                        }
+                        if (cb_js_biji.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_5", cb_js_biji.Checked);
+                        }
+
+
+                        if (cb_js_buah.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_6", cb_js_buah.Text);
+                        }
+                        if (cb_js_buah.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_6", cb_js_buah.Checked);
+                        }
+
+
+
+                        if (cb_js_lain.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_7", cb_js_lain.Text);
+                        }
+                        if (cb_js_lain.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_7", cb_js_lain.Checked);
+                        }
+
+
+
+                        if (cb_js_all.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_All", cb_js_all.Text);
+                        }
+                        if (cb_js_all.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@jenis_sampel_All", cb_js_all.Checked);
+                        }
+                        
+                        
+                       
 
                     //    string check1 = "";
 
@@ -370,24 +456,134 @@ namespace simlab.GUI
                         cmd.Parameters.AddWithValue("@nama_pelabuhan_asal", txt_nm_pelabuhanA.Text);
                         
                         cmd.Parameters.AddWithValue("@id_pelabuhan_tujuan", txt_kode_pelabuhanT.Text);
-                        cmd.Parameters.AddWithValue("@nama_pelabuhan_tujuan", txt_nm_pelabuhanT.Text);                        
+                        cmd.Parameters.AddWithValue("@nama_pelabuhan_tujuan", txt_nm_pelabuhanT.Text);
+
+
+                        if (cb_tp_virus.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji1", cb_tp_virus.Text);
+                        }
+                        if (cb_tp_virus.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji1", cb_tp_virus.Checked);
+                        }
+
+
+                        if (cb_tp_cendawan.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji2", cb_tp_cendawan.Text);
+                        }
+                        if (cb_tp_cendawan.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji2", cb_tp_cendawan.Checked);
+                        }
+
+
+
+
+                        if (cb_tp_bakteri.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji3", cb_tp_bakteri.Text);
+                        }
+                        if (cb_tp_bakteri.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji3", cb_tp_bakteri.Checked);
+                        }
+
+
+                        if (cb_tp_biotek.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji4", cb_tp_biotek.Text);
+                        }
+                        if (cb_tp_biotek.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji4", cb_tp_biotek.Checked);
+                        }
+
+
+
+                        if (cb_tp_serangga.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji5", cb_tp_serangga.Text);
+                        }
+                        if (cb_tp_serangga.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji5", cb_tp_serangga.Checked);
+                        }
+
+
+
+                        if (cb_tp_nematoda.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji6", cb_tp_nematoda.Text);
+                        }
+                        if (cb_tp_nematoda.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji6", cb_tp_nematoda.Checked);
+                        }
+
+
+
+                        if (cb_tp_gulma.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji7", cb_tp_gulma.Text);
+                        }
+                        if (cb_tp_gulma.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@target_uji7", cb_tp_gulma.Checked);
+                        }
                         
-                        cmd.Parameters.AddWithValue("@target_uji1", cb_tp_virus.Text);
-                        cmd.Parameters.AddWithValue("@target_uji2", cb_tp_cendawan.Text);
-                        cmd.Parameters.AddWithValue("@target_uji3", cb_tp_bakteri.Text);
-                        cmd.Parameters.AddWithValue("@target_uji4", cb_tp_biotek.Text);
-                        cmd.Parameters.AddWithValue("@target_uji5", cb_tp_serangga.Text);
-                        cmd.Parameters.AddWithValue("@target_uji6", cb_tp_nematoda.Text);
-                        cmd.Parameters.AddWithValue("@target_uji7", cb_tp_gulma.Text);
+                        
+                        
                         
                         cmd.Parameters.AddWithValue("@kode_targetpest", txt_kd_targetpest.Text);
-                        
-                        cmd.Parameters.AddWithValue("@metode_periksa1", cb_mp_pLangsung.Text);
-                        cmd.Parameters.AddWithValue("@metode_periksa2", cb_mp_agar.Text);
-                        cmd.Parameters.AddWithValue("@metode_periksa3", cb_mp_pcr.Text);
-                        cmd.Parameters.AddWithValue("@metode_periksa4", cb_mp_blotter.Text);
-                        cmd.Parameters.AddWithValue("@metode_periksa5", cb_mp_elisa.Text);
-                        
+
+
+                        if (cb_mp_pLangsung.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa1", cb_mp_pLangsung.Text);
+                        }
+                        if (cb_mp_pLangsung.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa1", cb_mp_pLangsung.Checked);
+                        }
+
+                        if (cb_mp_pLangsung.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa2", cb_mp_agar.Text);
+                        }
+                        if (cb_mp_pLangsung.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa2", cb_mp_agar.Checked);
+                        }
+
+                        if (cb_mp_pLangsung.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa3", cb_mp_pcr.Text);
+                        }
+                        if (cb_mp_pLangsung.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa3", cb_mp_pcr.Checked);
+                        }
+
+                        if (cb_mp_pLangsung.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa4", cb_mp_blotter.Text);
+                        }
+                        if (cb_mp_pLangsung.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa4", cb_mp_blotter.Checked);
+                        }
+
+                        if (cb_mp_pLangsung.Checked == true)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa5", cb_mp_elisa.Text);
+                        }
+                        if (cb_mp_pLangsung.Checked == false)
+                        {
+                            cmd.Parameters.AddWithValue("@metode_periksa5", cb_mp_elisa.Checked);
+                        }
+                       
                         cmd.Parameters.AddWithValue("@id_PP", txt_kd_PP.Text);
 
                         cmd.ExecuteNonQuery();
@@ -438,12 +634,12 @@ namespace simlab.GUI
             GUI.view_permohonan v_permohonan = new GUI.view_permohonan();
             v_permohonan.ShowDialog();
 
-
             txt_noPermohonan.Text = v_permohonan.ambil_no_permohonan;
             dtp_tanggal.Text = v_permohonan.ambil_tgl_permohonan;
             cmb_Jkegiatan.Text = v_permohonan.ambil_jenis_kegiatan;
             txt_nama_pemohon.Text = v_permohonan.ambil_nama_pemohon;
             txt_alamat_pemohon.Text = v_permohonan.ambil_alamat_pemohon;
+
             cb_komoditi.Text = v_permohonan.ambil_jenis_media1;
             cb_opt.Text = v_permohonan.ambil_jenis_media2;
             txt_kode_komoditi.Text = v_permohonan.ambil_kode_komoditi;
@@ -670,10 +866,61 @@ namespace simlab.GUI
 
         private void btn_batal_Click(object sender, EventArgs e)
         {
+            Bersih();
         }
 
         private void btn_hapus_Click(object sender, EventArgs e)
         {
+        }
+
+        private void txt_alamat_pemohon_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_keluar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Anda Ingin Keluar ? ", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Close();
+            }
+            
+        }
+
+        private void cb_komoditi_CheckedChanged(object sender, EventArgs e)
+        {
+           // if (cb_komoditi.Checked)
+          //  {
+           //     txt_kode_komoditi.Enabled = true;
+            //    txt_nmKomoditi.Enabled = true;
+             //   txt_ilmiah_komod.Enabled = true;
+              //  btn_tmbhKomoditi.Enabled = true;
+                
+              //  txt_kode_opt.Enabled = false;
+               // txt_kode_opt.Text = "";
+              //  txt_nm_opt.Enabled = false;
+              //  txt_nm_opt.Text = "";
+              //  txt_ilmiah_opt.Enabled = false;
+              //  txt_ilmiah_opt.Text = "";
+               // btn_tmbhOPT.Enabled = false;
+           // }
+
+           // else if (cb_opt.Checked)
+           // {
+               // txt_kode_opt.Enabled = true;
+             //   txt_nm_opt.Enabled = true;
+             //   txt_ilmiah_opt.Enabled = true;
+              //  btn_tmbhOPT.Enabled = true;
+
+//                txt_kode_komoditi.Enabled = false;
+  //              txt_kode_komoditi.Text = "";
+   //             txt_nmKomoditi.Enabled = false;
+     //           txt_nmKomoditi.Text = "";
+       //         txt_ilmiah_komod.Enabled = false;
+         //       txt_ilmiah_komod.Text = "";
+           //     btn_tmbhKomoditi.Enabled = false;
+           // }
+
         }
     }
 }

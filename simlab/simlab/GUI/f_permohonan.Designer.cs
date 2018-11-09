@@ -39,7 +39,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.txt_perbks = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.grb_opt = new System.Windows.Forms.GroupBox();
             this.txt_kode_opt = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.btn_tmbhOPT = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_ilmiah_opt = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.grb_komoditi = new System.Windows.Forms.GroupBox();
             this.btn_tmbhKomoditi = new System.Windows.Forms.Button();
             this.txt_ilmiah_komod = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -143,9 +143,10 @@
             this.txt_kode_pelabuhanA = new System.Windows.Forms.TextBox();
             this.txt_kdprov_tujuan = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btn_keluar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.grb_opt.SuspendLayout();
+            this.grb_komoditi.SuspendLayout();
             this.groupbox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -220,8 +221,8 @@
             this.groupBox1.Controls.Add(this.label30);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Controls.Add(this.txt_perbks);
-            this.groupBox1.Controls.Add(this.groupBox5);
-            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.Controls.Add(this.grb_opt);
+            this.groupBox1.Controls.Add(this.grb_komoditi);
             this.groupBox1.Controls.Add(this.cmb_satuan);
             this.groupBox1.Controls.Add(this.cb_js_umbi);
             this.groupBox1.Controls.Add(this.cb_js_all);
@@ -245,7 +246,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(22, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(639, 645);
+            this.groupBox1.Size = new System.Drawing.Size(639, 633);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -278,22 +279,22 @@
             this.txt_perbks.TabIndex = 45;
             this.txt_perbks.Text = " ";
             // 
-            // groupBox5
+            // grb_opt
             // 
-            this.groupBox5.Controls.Add(this.txt_kode_opt);
-            this.groupBox5.Controls.Add(this.label29);
-            this.groupBox5.Controls.Add(this.btn_tmbhOPT);
-            this.groupBox5.Controls.Add(this.txt_nm_opt);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.txt_ilmiah_opt);
-            this.groupBox5.Location = new System.Drawing.Point(331, 168);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(300, 268);
-            this.groupBox5.TabIndex = 44;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "OPT";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            this.grb_opt.Controls.Add(this.txt_kode_opt);
+            this.grb_opt.Controls.Add(this.label29);
+            this.grb_opt.Controls.Add(this.btn_tmbhOPT);
+            this.grb_opt.Controls.Add(this.txt_nm_opt);
+            this.grb_opt.Controls.Add(this.label10);
+            this.grb_opt.Controls.Add(this.label8);
+            this.grb_opt.Controls.Add(this.txt_ilmiah_opt);
+            this.grb_opt.Location = new System.Drawing.Point(331, 168);
+            this.grb_opt.Name = "grb_opt";
+            this.grb_opt.Size = new System.Drawing.Size(300, 268);
+            this.grb_opt.TabIndex = 44;
+            this.grb_opt.TabStop = false;
+            this.grb_opt.Text = "OPT";
+            this.grb_opt.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // txt_kode_opt
             // 
@@ -359,21 +360,21 @@
             this.txt_ilmiah_opt.Size = new System.Drawing.Size(194, 70);
             this.txt_ilmiah_opt.TabIndex = 42;
             // 
-            // groupBox4
+            // grb_komoditi
             // 
-            this.groupBox4.Controls.Add(this.btn_tmbhKomoditi);
-            this.groupBox4.Controls.Add(this.txt_ilmiah_komod);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.txt_kode_komoditi);
-            this.groupBox4.Controls.Add(this.label28);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.txt_nmKomoditi);
-            this.groupBox4.Location = new System.Drawing.Point(9, 168);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(311, 268);
-            this.groupBox4.TabIndex = 43;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "KOMODITI";
+            this.grb_komoditi.Controls.Add(this.btn_tmbhKomoditi);
+            this.grb_komoditi.Controls.Add(this.txt_ilmiah_komod);
+            this.grb_komoditi.Controls.Add(this.label9);
+            this.grb_komoditi.Controls.Add(this.txt_kode_komoditi);
+            this.grb_komoditi.Controls.Add(this.label28);
+            this.grb_komoditi.Controls.Add(this.label7);
+            this.grb_komoditi.Controls.Add(this.txt_nmKomoditi);
+            this.grb_komoditi.Location = new System.Drawing.Point(9, 168);
+            this.grb_komoditi.Name = "grb_komoditi";
+            this.grb_komoditi.Size = new System.Drawing.Size(311, 268);
+            this.grb_komoditi.TabIndex = 43;
+            this.grb_komoditi.TabStop = false;
+            this.grb_komoditi.Text = "KOMODITI";
             // 
             // btn_tmbhKomoditi
             // 
@@ -612,6 +613,7 @@
             this.cb_komoditi.TabIndex = 13;
             this.cb_komoditi.Text = "KOMODITI";
             this.cb_komoditi.UseVisualStyleBackColor = true;
+            this.cb_komoditi.CheckedChanged += new System.EventHandler(this.cb_komoditi_CheckedChanged);
             // 
             // label6
             // 
@@ -630,6 +632,7 @@
             this.txt_alamat_pemohon.Name = "txt_alamat_pemohon";
             this.txt_alamat_pemohon.Size = new System.Drawing.Size(202, 46);
             this.txt_alamat_pemohon.TabIndex = 11;
+            this.txt_alamat_pemohon.TextChanged += new System.EventHandler(this.txt_alamat_pemohon_TextChanged);
             // 
             // label5
             // 
@@ -697,7 +700,7 @@
             this.groupbox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupbox2.Location = new System.Drawing.Point(667, 274);
             this.groupbox2.Name = "groupbox2";
-            this.groupbox2.Size = new System.Drawing.Size(513, 413);
+            this.groupbox2.Size = new System.Drawing.Size(513, 401);
             this.groupbox2.TabIndex = 38;
             this.groupbox2.TabStop = false;
             // 
@@ -1109,7 +1112,7 @@
             // 
             // btn_batal
             // 
-            this.btn_batal.Location = new System.Drawing.Point(102, 19);
+            this.btn_batal.Location = new System.Drawing.Point(86, 19);
             this.btn_batal.Name = "btn_batal";
             this.btn_batal.Size = new System.Drawing.Size(60, 23);
             this.btn_batal.TabIndex = 79;
@@ -1119,7 +1122,7 @@
             // 
             // btn_hapus
             // 
-            this.btn_hapus.Location = new System.Drawing.Point(57, 60);
+            this.btn_hapus.Location = new System.Drawing.Point(45, 60);
             this.btn_hapus.Name = "btn_hapus";
             this.btn_hapus.Size = new System.Drawing.Size(60, 23);
             this.btn_hapus.TabIndex = 80;
@@ -1129,19 +1132,19 @@
             // 
             // btn_cetak
             // 
-            this.btn_cetak.Location = new System.Drawing.Point(9, 58);
+            this.btn_cetak.Location = new System.Drawing.Point(37, 58);
             this.btn_cetak.Name = "btn_cetak";
-            this.btn_cetak.Size = new System.Drawing.Size(150, 23);
+            this.btn_cetak.Size = new System.Drawing.Size(78, 23);
             this.btn_cetak.TabIndex = 81;
-            this.btn_cetak.Text = "CETAK PERMOHONAN";
+            this.btn_cetak.Text = "CETAK";
             this.btn_cetak.UseVisualStyleBackColor = true;
             this.btn_cetak.Click += new System.EventHandler(this.btn_cetak_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(20, 19);
+            this.button1.Location = new System.Drawing.Point(37, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 23);
+            this.button1.Size = new System.Drawing.Size(78, 23);
             this.button1.TabIndex = 82;
             this.button1.Text = "LIHAT DATA";
             this.button1.UseVisualStyleBackColor = true;
@@ -1152,9 +1155,9 @@
             this.groupBox3.Controls.Add(this.btn_simpan);
             this.groupBox3.Controls.Add(this.btn_batal);
             this.groupBox3.Controls.Add(this.btn_hapus);
-            this.groupBox3.Location = new System.Drawing.Point(1186, 451);
+            this.groupBox3.Location = new System.Drawing.Point(1186, 416);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(168, 89);
+            this.groupBox3.Size = new System.Drawing.Size(159, 89);
             this.groupBox3.TabIndex = 83;
             this.groupBox3.TabStop = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
@@ -1187,7 +1190,7 @@
             this.groupBox6.Controls.Add(this.txt_idnegara_asal);
             this.groupBox6.Location = new System.Drawing.Point(667, 42);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(687, 226);
+            this.groupBox6.Size = new System.Drawing.Size(665, 226);
             this.groupBox6.TabIndex = 86;
             this.groupBox6.TabStop = false;
             // 
@@ -1339,11 +1342,21 @@
             // 
             this.groupBox7.Controls.Add(this.btn_cetak);
             this.groupBox7.Controls.Add(this.button1);
-            this.groupBox7.Location = new System.Drawing.Point(1186, 557);
+            this.groupBox7.Location = new System.Drawing.Point(1186, 522);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(168, 89);
+            this.groupBox7.Size = new System.Drawing.Size(159, 89);
             this.groupBox7.TabIndex = 87;
             this.groupBox7.TabStop = false;
+            // 
+            // btn_keluar
+            // 
+            this.btn_keluar.Location = new System.Drawing.Point(1231, 639);
+            this.btn_keluar.Name = "btn_keluar";
+            this.btn_keluar.Size = new System.Drawing.Size(60, 23);
+            this.btn_keluar.TabIndex = 81;
+            this.btn_keluar.Text = "KELUAR";
+            this.btn_keluar.UseVisualStyleBackColor = true;
+            this.btn_keluar.Click += new System.EventHandler(this.btn_keluar_Click);
             // 
             // btn_view_permohonan
             // 
@@ -1351,7 +1364,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1366, 710);
+            this.ClientSize = new System.Drawing.Size(1366, 711);
+            this.Controls.Add(this.btn_keluar);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox3);
@@ -1367,14 +1381,14 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "btn_view_permohonan";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.f_permohonan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.grb_opt.ResumeLayout(false);
+            this.grb_opt.PerformLayout();
+            this.grb_komoditi.ResumeLayout(false);
+            this.grb_komoditi.PerformLayout();
             this.groupbox2.ResumeLayout(false);
             this.groupbox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1453,11 +1467,11 @@
         private System.Windows.Forms.Button btn_new;
         private System.Windows.Forms.ComboBox cmb_satuan;
         private System.Windows.Forms.Button btn_tmbhT_Pest;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox grb_opt;
         private System.Windows.Forms.Button btn_tmbhOPT;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_ilmiah_opt;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox grb_komoditi;
         private System.Windows.Forms.Button btn_tmbhKomoditi;
         private System.Windows.Forms.TextBox txt_ilmiah_komod;
         private System.Windows.Forms.Label label9;
@@ -1502,5 +1516,6 @@
         private System.Windows.Forms.TextBox txt_kdprov_asal;
         private System.Windows.Forms.TextBox txt_kd_PP;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button btn_keluar;
     }
 }

@@ -12,7 +12,7 @@ namespace simlab.kelas
         public SqlConnection GetConn()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "server = USER-PC\\SQLEXPRESS; Initial Catalog = db_dummy; Integrated Security = True";
+            conn.ConnectionString = "Data Source = USER; Initial Catalog = db_dummy; Integrated Security = True";
             return conn;
         }
     }

@@ -16,8 +16,15 @@ namespace simlab.GUI
         private SqlCommand cmd;
         private DataSet ds;
         private SqlDataAdapter sda;
-        public string no_perm, tgl_perm, jenis_keg, nama_pem, alamat_pem, jenis_med1, jenis_med2, kode_kom, nama_umum_kom, nama_latin_kom, kode_op, nama_umum_op, nama_latin_op, jumlah_semp, satuan, per_bngkus, jenis_smpl1, jenis_smpl2, jenis_smpl3, jenis_smpl4, jenis_smpl5, jenis_smpl6, jenis_smpl7, jenis_smpl_all, media_pemb, jenis_smpl_opt, id_ngr_asl, nama_negara_asal, id_ngr_tjn, nama_negara_tjn, kode_prov_asl, nama_prov_asal, kode_prov_tjn, nama_prov_tjn, id_plbhn_asl, nama_plbhn_asl, id_plbhn_tjn, nama_plbhn_tjn, target_uj1, target_uj2, target_uj3, target_uj4, target_uj5, target_uj6, target_uj7, target_pet, metode_per1, metode_per2, metode_per3, metode_per4, metode_per5, id_pemilik, dokumen_pend = "";
-
+        public string no_perm, tgl_perm, jenis_keg, nama_pem, alamat_pem, jenis_med1,
+            jenis_med2, kode_kom, nama_umum_kom, nama_latin_kom, kode_op, nama_umum_op,
+            nama_latin_op, jumlah_semp, satuan, per_bngkus, jenis_smpl1, jenis_smpl2,
+            jenis_smpl3, jenis_smpl4, jenis_smpl5, jenis_smpl6, jenis_smpl7, jenis_smpl_all,
+            media_pemb, jenis_smpl_opt, id_ngr_asl, nama_negara_asal, id_ngr_tjn, nama_negara_tjn,
+            kode_prov_asl, nama_prov_asal, kode_prov_tjn, nama_prov_tjn, id_plbhn_asl, nama_plbhn_asl,
+            id_plbhn_tjn, nama_plbhn_tjn, target_uj1, target_uj2, target_uj3, target_uj4, target_uj5,
+            target_uj6, target_uj7, target_pet, metode_per1, metode_per2, metode_per3, metode_per4,
+            metode_per5, id_pemilik, dokumen_pend = "";
 
         kelas.koneksi konn = new kelas.koneksi();
 
@@ -76,9 +83,9 @@ namespace simlab.GUI
             conn.Close();
         }
 
-        private void dtg_view_permohonan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtg_view_permohonan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-              try
+            try
             {
                 DataGridViewRow rows = this.dtg_view_permohonan.Rows[e.RowIndex];
                 no_perm = rows.Cells["no_permohonan"].Value.ToString();
@@ -86,8 +93,10 @@ namespace simlab.GUI
                 jenis_keg = rows.Cells["jenis_kegiatan"].Value.ToString();
                 nama_pem = rows.Cells["nama_pemohon"].Value.ToString();
                 alamat_pem = rows.Cells["alamat_pemohon"].Value.ToString();
+
                 jenis_med1 = rows.Cells["jenis_media1"].Value.ToString();
                 jenis_med2 = rows.Cells["jenis_media2"].Value.ToString();
+
                 kode_kom = rows.Cells["kode_komoditi"].Value.ToString();
                 nama_umum_kom = rows.Cells["nama_umum_komoditi"].Value.ToString();
                 nama_latin_kom = rows.Cells["nama_latin_komoditi"].Value.ToString();
@@ -141,8 +150,6 @@ namespace simlab.GUI
                 MessageBox.Show(sa.ToString());
             }
         }
-
-
 
         public String ambil_no_permohonan
         {
@@ -566,7 +573,7 @@ namespace simlab.GUI
             {
                 return dokumen_pend;
             }
-        
+
         }
     }
 }
